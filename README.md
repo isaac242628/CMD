@@ -26,37 +26,37 @@ Este script em lote realiza várias operações na unidade C: do sistema, como v
 
 ```batch
 @echo off
-vol C:
+vol c:
 ver
 cls
-dir C:\
+dir c:\
 
-mkdir C:\Huginho
-mkdir C:\Zezinho
-mkdir C:\Luizinho
+mkdir c:\Huginho
+mkdir c:\Zezinho
+mkdir c:\Luizinho
 
-if exist C:\Huginho echo Pasta Huginho criada com sucesso
-if exist C:\Zezinho echo Pasta Zezinho criada com sucesso
-if exist C:\Luizinho echo Pasta Luizinho criada com sucesso
+if exist c:\Huginho echo Pasta Huginho criada com sucesso
+if exist c:\Zezinho echo Pasta Zezinho criada com sucesso
+if exist c:\Luizinho echo Pasta Luizinho criada com sucesso
 
 for %%p in (Huginho Zezinho Luizinho) do (
-    mkdir C:\%%p\Argentina
-    mkdir C:\%%p\Brasil
-    mkdir C:\%%p\Uruguai
-    if exist C:\%%p\Argentina echo Subpasta Argentina criada com sucesso na pasta %%p
-    if exist C:\%%p\Brasil echo Subpasta Brasil criada com sucesso na pasta %%p
-    if exist C:\%%p\Uruguai echo Subpasta Uruguai criada com sucesso na pasta %%p
+    mkdir c:\%%p\Argentina
+    mkdir c:\%%p\Brasil
+    mkdir c:\%%p\Uruguai
+    if exist c:\%%p\Argentina echo Subpasta Argentina criada com sucesso na pasta %%p
+    if exist c:\%%p\Brasil echo Subpasta Brasil criada com sucesso na pasta %%p
+    if exist c:\%%p\Uruguai echo Subpasta Uruguai criada com sucesso na pasta %%p
 )
 
 for %%p in (Huginho Zezinho Luizinho) do (
-    rmdir /S /Q C:\%%p\Argentina
-    if not exist C:\%%p\Argentina echo Pasta Argentina removida da pasta %%p
+    rmdir /S /Q c:\%%p\Argentina
+    if not exist c:\%%p\Argentina echo Pasta Argentina removida da pasta %%p
 )
 
-echo Log de criação de pastas e arquivos > C:\log.txt
+echo Log de criação de pastas e arquivos > c:\log.txt
 
 for %%p in (Huginho Zezinho Luizinho) do (
-    copy C:\log.txt C:\%%p\
+    copy c:\log.txt c:\%%p\
 )
 
 pause
